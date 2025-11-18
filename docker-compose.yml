@@ -8,12 +8,15 @@ services:
     ports:
       - "5001:5001"
   jenkins:
-    image: jenkins/jenkins:lts
+    build:
+      context: .
+      dockerfile: Jenkins.Dockerfile       # Aponta para o Dockerfile customizado
     ports:
       - "8080:8080"
       - "50000:50000"
     volumes:
       - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
     restart: unless-stopped
 
 volumes:
