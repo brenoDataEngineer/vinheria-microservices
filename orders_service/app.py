@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import jwt
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'sua_chave_secreta'
+app.config['SECRET_KEY'] = 'CHAVE_PRIVADA_SIMULADA'
 
 # Pedidos armazenados em memória
 orders = []

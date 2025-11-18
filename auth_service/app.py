@@ -4,7 +4,7 @@ import jwt
 import datetime
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'sua_chave_secreta'
+app.config['SECRET_KEY'] = 'CHAVE_PRIVADA_SIMULADA'
 
 # Usuários - exemplo em memória
 users = {}
